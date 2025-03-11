@@ -1,0 +1,53 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-umdgeoguesser-dev-dd4b1-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140023383159:role/amplify-umdgeoguesser-dev-dd4b1-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140023383159:role/amplify-umdgeoguesser-dev-dd4b1-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-umdgeoguesser-dev-dd4b1-deployment",
+      "UnauthRoleName": "amplify-umdgeoguesser-dev-dd4b1-unauthRole",
+      "StackName": "amplify-umdgeoguesser-dev-dd4b1",
+      "StackId": "arn:aws:cloudformation:us-east-1:140023383159:stack/amplify-umdgeoguesser-dev-dd4b1/f95e38d0-ef18-11ef-b4b2-12b4b457fe5b",
+      "AmplifyAppId": "d2ubvuwtqqg6aq"
+    },
+    "categories": {
+      "auth": {
+        "umdgeoguesser7e0fdc7f": {}
+      },
+      "storage": {
+        "Images": {}
+      },
+      "api": {
+        "umdgeoguesser": {}
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-umdgeoguesser-prod-00824-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140023383159:role/amplify-umdgeoguesser-prod-00824-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140023383159:role/amplify-umdgeoguesser-prod-00824-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-umdgeoguesser-prod-00824-deployment",
+      "UnauthRoleName": "amplify-umdgeoguesser-prod-00824-unauthRole",
+      "StackName": "amplify-umdgeoguesser-prod-00824",
+      "StackId": "arn:aws:cloudformation:us-east-1:140023383159:stack/amplify-umdgeoguesser-prod-00824/364c0d50-f156-11ef-9c57-12e25e1641f5",
+      "AmplifyAppId": "d2ubvuwtqqg6aq"
+    },
+    "categories": {
+      "auth": {
+        "umdgeoguesser7e0fdc7f": {
+          "googleClientId": "735921339914-pb4fd53m869c7blaf398akfr2qa9sket.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "api": {
+        "umdgeoguesser": {}
+      },
+      "storage": {
+        "Images": {}
+      }
+    }
+  }
+}
