@@ -20,9 +20,19 @@
     }
   },
   "auth": {
-    "umdgeoguesser7e0fdc7f": {
+    "umdgeoguesser84bc928a": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "umdgeoguesser84bc928aPostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -47,30 +57,37 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
-    },
-    "userPoolGroups": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId",
-            "AppClientIDWeb",
-            "AppClientID",
-            "IdentityPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "umdgeoguesser7e0fdc7f"
-        }
-      ],
+    }
+  },
+  "function": {
+    "umdgeoguesser84bc928aPostConfirmation": {
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Cognito-UserPool-Groups"
+      "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_auth_umdgeoguesser7e0fdc7f_googleClientId": {
+    "AMPLIFY_function_umdgeoguesser84bc928aPostConfirmation_GROUP": {
       "usedBy": [
         {
-          "category": "auth",
-          "resourceName": "umdgeoguesser7e0fdc7f"
+          "category": "function",
+          "resourceName": "umdgeoguesser84bc928aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_umdgeoguesser84bc928aPostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "umdgeoguesser84bc928aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_umdgeoguesser84bc928aPostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "umdgeoguesser84bc928aPostConfirmation"
         }
       ]
     }

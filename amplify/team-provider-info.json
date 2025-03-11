@@ -33,20 +33,25 @@
       "UnauthRoleName": "amplify-umdgeoguesser-prod-00824-unauthRole",
       "StackName": "amplify-umdgeoguesser-prod-00824",
       "StackId": "arn:aws:cloudformation:us-east-1:140023383159:stack/amplify-umdgeoguesser-prod-00824/364c0d50-f156-11ef-9c57-12e25e1641f5",
-      "AmplifyAppId": "d2ubvuwtqqg6aq"
+      "AmplifyAppId": "d2ubvuwtqqg6aq",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-umdgeoguesser-prod-00824-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
-      "auth": {
-        "umdgeoguesser7e0fdc7f": {
-          "googleClientId": "735921339914-pb4fd53m869c7blaf398akfr2qa9sket.apps.googleusercontent.com"
-        },
-        "userPoolGroups": {}
-      },
       "api": {
         "umdgeoguesser": {}
       },
       "storage": {
         "Images": {}
+      },
+      "auth": {
+        "umdgeoguesser84bc928a": {}
+      },
+      "function": {
+        "umdgeoguesser84bc928aPostConfirmation": {
+          "GROUP": "dev2",
+          "deploymentBucketName": "amplify-umdgeoguesser-prod-00824-deployment",
+          "s3Key": "amplify-builds/umdgeoguesser84bc928aPostConfirmation-78414e2f6d4149656f30-build.zip"
+        }
       }
     }
   }
