@@ -11,7 +11,6 @@ export const AuthProvider = ({ children }) => {
 
   const signInWithGoogle = async () => {
     try {
-      // In Amplify v5, use federatedSignIn to trigger social sign-in
       await Auth.federatedSignIn({ provider: 'Google' });
     } catch (error) {
       console.error("Error signing in with Google:", error);

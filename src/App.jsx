@@ -16,7 +16,20 @@ import awsconfig from './aws-exports';
 
 ConsoleLogger.LOG_LEVEL = 'DEBUG';
 
-Amplify.configure(awsconfig);
+const urlConfig = {
+  ...awsconfig,
+  oauth: {
+    ...awsconfig.oauth,
+    redirectSignIn: window.location.hostname === 'localhost' 
+      ? 'http://localhost:3000/'
+      : 'https://main.d2ubvuwtqqg6aq.amplifyapp.com/',
+    redirectSignOut: window.location.hostname === 'localhost'
+      ? 'http://localhost:3000/'
+      : 'https://main.d2ubvuwtqqg6aq.amplifyapp.com/'
+  }
+};
+
+Amplify.configure(urlConfig);
 
 function App() {
   return (
