@@ -52,6 +52,9 @@
           "deploymentBucketName": "amplify-umdgeoguesser-prod-00824-deployment",
           "s3Key": "amplify-builds/umdgeoguesser84bc928aPostConfirmation-78414e2f6d4149656f30-build.zip"
         }
+      },
+      "analytics": {
+        "umdgeoguesser": {}
       }
     }
   }

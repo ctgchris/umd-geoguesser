@@ -1,5 +1,7 @@
 import React from "react";
 import PuzzleView from "./PuzzleView";
+import PageViewTracker from "./analytics/PageViewTracker";
+
 const getLocalDateString = () => {
     const d = new Date();
     const year = d.getFullYear();
@@ -10,7 +12,17 @@ const getLocalDateString = () => {
   };
   const DailyPuzzle = () => {
     const today = getLocalDateString(); // Now using local date
-    return <PuzzleView puzzleDate={today} />;
+    return (
+      <PageViewTracker 
+        pageName="Daily Puzzle"
+        additionalData={{
+          puzzleDate: today,
+          isDaily: true
+        }}
+      >
+        <PuzzleView puzzleDate={today} />
+      </PageViewTracker>
+    );
   };
 
 export default DailyPuzzle;

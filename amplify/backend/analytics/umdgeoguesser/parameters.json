@@ -1,0 +1,21 @@
+{
+    "appName": "umdgeoguesser",
+    "roleName": "pinpointLambdaRole799ff2d8",
+    "cloudformationPolicyName": "cloudformationPolicy799ff2d8",
+    "cloudWatchPolicyName": "cloudWatchPolicy799ff2d8",
+    "pinpointPolicyName": "pinpointPolicy799ff2d8",
+    "authPolicyName": "pinpoint_amplify_799ff2d8",
+    "unauthPolicyName": "pinpoint_amplify_799ff2d8",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

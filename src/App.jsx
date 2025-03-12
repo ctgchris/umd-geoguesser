@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { memo, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import DailyPuzzle from './components/DailyPuzzle';
 import PastPuzzles from './components/PastPuzzles';
 import PuzzleDetail from './components/PuzzleDetail';
@@ -13,6 +13,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import { Amplify } from 'aws-amplify';
 import { ConsoleLogger } from '@aws-amplify/core';
 import awsconfig from './aws-exports';
+import { initializeAnalytics, trackEvent } from './config/analytics';
 
 ConsoleLogger.LOG_LEVEL = 'DEBUG';
 
@@ -31,26 +32,46 @@ const urlConfig = {
 
 Amplify.configure(urlConfig);
 
+// Initialize analytics
+initializeAnalytics();
+
+// Analytics wrapper component
+const AnalyticsWrapper = ({ children }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Track page views
+    trackEvent('pageView', {
+      path: location.pathname,
+      search: location.search
+    });
+  }, [location]);
+
+  return children;
+};
+
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="w-full bg-[rgb(226,24,51)] text-center py-2 text-sm text-white">
-          University of Maryland
-        </div>
-        <Header />
-        <main className="min-h-screen">
-          <Routes>
-            <Route path="/" element={<DailyPuzzle />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/past" element={<PastPuzzles />} />
-            <Route path="/puzzle/:date" element={<PuzzleDetail />} />
-            <Route path="/admin" element={<AdminPanel />} />
-          </Routes>
-        </main>
-        <ProjectDescription />
-        <FeedbackSection />
-        <Footer />
+        <AnalyticsWrapper>
+          <div className="w-full bg-[rgb(226,24,51)] text-center py-2 text-sm text-white">
+            University of Maryland
+          </div>
+          <Header />
+          <main className="min-h-screen">
+            <Routes>
+              <Route path="/" element={<DailyPuzzle />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/past" element={<PastPuzzles />} />
+              <Route path="/puzzle/:date" element={<PuzzleDetail />} />
+              <Route path="/admin" element={<AdminPanel />} />
+            </Routes>
+          </main>
+          <ProjectDescription />
+          <FeedbackSection />
+          <Footer />
+        </AnalyticsWrapper>
       </Router>
     </AuthProvider>
   );

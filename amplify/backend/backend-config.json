@@ -1,4 +1,10 @@
 {
+  "analytics": {
+    "umdgeoguesser": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
   "api": {
     "umdgeoguesser": {
       "dependsOn": [],
