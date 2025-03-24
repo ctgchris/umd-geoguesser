@@ -23,10 +23,10 @@ const urlConfig = {
     ...awsconfig.oauth,
     redirectSignIn: window.location.hostname === 'localhost' 
       ? 'http://localhost:3000/'
-      : 'https://main.d2ubvuwtqqg6aq.amplifyapp.com/',
+      : 'https://umdgeoguesser.com/',
     redirectSignOut: window.location.hostname === 'localhost'
       ? 'http://localhost:3000/'
-      : 'https://main.d2ubvuwtqqg6aq.amplifyapp.com/'
+      : 'https://umdgeoguesser.com/'
   }
 };
 
