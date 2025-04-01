@@ -1,6 +1,11 @@
 # UMD GeoGuesser
 A web application for geography enthusiasts, featuring daily and past puzzles.  Users can test their knowledge of geographic locations by guessing the location of images. An admin panel allows authorized users to add and manage puzzles.
 
+<div align="center">
+<img src="https://github.com/ctgchris/umd-geoguesser/blob/main/image-1743495353563.png?raw=true" alt="image-1743495353563.png" />
+</div>
+
+
 ## Features
 * **Daily Puzzle:** A new puzzle is presented daily.
 * **Past Puzzles:** Access to a library of past puzzles.
@@ -60,3 +65,5 @@ See `package.json` for a complete list of dependencies and their versions.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
+
+*README.md was made with [Etchr](https://etchr.dev)*
