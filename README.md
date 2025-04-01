@@ -5,6 +5,10 @@ A web application for geography enthusiasts, featuring daily and past puzzles.  
 <img src="https://github.com/ctgchris/umd-geoguesser/blob/main/image-1743495353563.png?raw=true" alt="image-1743495353563.png" />
 </div>
 
+<div align="center">
+<img src="https://github.com/ctgchris/umd-geoguesser/blob/main/image-1743495576099.png?raw=true" alt="image-1743495576099.png" />
+</div>
+
 
 ## Features
 * **Daily Puzzle:** A new puzzle is presented daily.
