@@ -60,5 +60,3 @@ See `package.json` for a complete list of dependencies and their versions.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
-
-*README.md was made with [Etchr](https://etchr.dev)*
