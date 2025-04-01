@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# UMD GeoGuesser
+A web application for geography enthusiasts, featuring daily and past puzzles.  Users can test their knowledge of geographic locations by guessing the location of images. An admin panel allows authorized users to add and manage puzzles.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+* **Daily Puzzle:** A new puzzle is presented daily.
+* **Past Puzzles:** Access to a library of past puzzles.
+* **Detailed Puzzle View:**  Each puzzle shows the image, allows for a guess, and reveals the actual location and distance from the user's guess.
+* **User Authentication:** Secure user login via Google authentication.
+* **User Scores:** Tracks and displays user scores for completed puzzles.
+* **Admin Panel:**  Allows authorized administrators to add, update, and delete puzzles. Includes features for uploading images and generating location summaries via AI.
+* **Analytics Tracking:** Tracks page views and user interactions for analytical purposes.
+* **Feedback Section:** Provides a mechanism for users to submit feedback.
 
-## Available Scripts
+## Usage
+1. Navigate to the deployed application (link to be added upon deployment).
+2. View the daily puzzle and submit your guess.
+3. Explore past puzzles and check your scores.
+   (For Administrators)
+4. Access the Admin Panel (link to be provided upon deployment) to manage puzzles.
 
-In the project directory, you can run:
+## Installation
+1. Clone the repository: `git clone git@github.com:<your_username>/geoguesser-umd.git`
+2. Navigate to the project directory: `cd geoguesser-umd`
+3. Install dependencies: `npm install`
+4. Create a `.env` file with the necessary API keys and AWS configurations.  See `.env.example` for placeholders.
+5. Start the development server: `npm start`
 
-### `npm start`
+## Technologies Used
+* **React:** JavaScript library for building user interfaces.
+* **React Router Dom:**  Routing library for React.
+* **AWS Amplify:** Framework for building AWS-powered applications, used for authentication, API interaction, and storage.
+* **AWS AppSync:** Serverless GraphQL API service.
+* **AWS Cognito:** User authentication and authorization service.
+* **AWS S3:** Object storage service for images.
+* **Google Maps API:** Used for displaying maps and calculating distances.
+* **@google/generative-ai:** Gemini AI API for generating fun facts.
+* **Tailwind CSS:** Utility-first CSS framework.
+* **Node.js & npm:** JavaScript runtime environment and package manager.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Configuration
+Create a `.env` file in the root directory of your project.  Populate it with the values from `.env.example`, replacing the placeholders with your actual API keys and AWS configurations. This includes:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* `REACT_APP_GOOGLE_MAPS_API_KEY`
+* `REACT_APP_GEMINI_API_KEY`
+* `REACT_APP_AWS_REGION`
+* `REACT_APP_AWS_USER_POOLS_ID`
+* `REACT_APP_AWS_USER_POOLS_WEB_CLIENT_ID`
+* `REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID`
+* `REACT_APP_AWS_APPSYNC_GRAPHQL_ENDPOINT`
+* `REACT_APP_AWS_APPSYNC_API_KEY`
+* `REACT_APP_AWS_USER_FILES_S3_BUCKET`
+* `REACT_APP_AWS_USER_FILES_S3_BUCKET_REGION`
+* `REACT_APP_OAUTH_DOMAIN`
 
-### `npm test`
+## API Documentation
+The application utilizes a GraphQL API hosted on AWS AppSync. The schema is defined in `src/graphql/schema.json`.  The queries and mutations are found in `src/graphql/queries.js` and `src/graphql/mutations.js` respectively.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies
+See `package.json` for a complete list of dependencies and their versions.
 
-### `npm run build`
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*README.md was made with [Etchr](https://etchr.dev)*
